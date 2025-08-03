@@ -1,5 +1,4 @@
 #%%load package
-import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -140,5 +139,6 @@ if st.button('Predict'):
     plt.title("Confusion Matrix of GBM model")
     disp1 = plt.show()
     st.pyplot(disp1)
+
 
 
