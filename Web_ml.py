@@ -66,10 +66,10 @@ Living_Conditions = map[Living_Conditions]
 
 # 数据读取，特征标注
 #%%load model
-gbm_model = joblib.load(r'D:\data_analysis\machine_learning\脑卒中数据与变量解释\gbm_model.pkl')
+gbm_model = joblib.load('gbm_model.pkl')
 
 #%%load data
-t_d = pd.read_csv(r'D:\data_analysis\machine_learning\脑卒中数据与变量解释\train.csv')
+t_d = pd.read_csv('train.csv')
 features = ["WST","PIF","FM","Hospital_Days","MIP","APGAR",
             "Affected_Cerebral_Hemisphere","IPAQ_SF","Payment",
             "History_Of_Smoking","Liver_Disease","Living_Conditions"]
@@ -140,4 +140,5 @@ if st.button('Predict'):
     plt.title("Confusion Matrix of GBM model")
     disp1 = plt.show()
     st.pyplot(disp1)
+
 
