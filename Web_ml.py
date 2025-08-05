@@ -46,10 +46,10 @@ FM =map[FM]
 
 # 数据读取，特征标注
 #%%load model
-cab_model = joblib.load(r'D:\data_analysis\machine_learning\脑卒中数据与变量解释\cab_model.pkl')
+cab_model = joblib.load(r'cab_model.pkl')
 
 #%%load data
-t_d = pd.read_csv(r'D:\data_analysis\machine_learning\脑卒中数据与变量解释\train.csv')
+t_d = pd.read_csv(r'train.csv')
 features = ["APGAR", "White_Blood_Cell", 
                    "Hemoglobin", "Grip_Strength", "FM", "Hospital_Days", 
                    "changed_of_Thigh_Circumference_Cm_", "MIP", "Maximal_Excursion"]
@@ -120,4 +120,5 @@ if st.button('Predict'):
     plt.title("Confusion Matrix of CAB model")
     disp1 = plt.show()
     st.pyplot(disp1)
+
 
